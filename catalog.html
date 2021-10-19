@@ -9,10 +9,10 @@
             <nav class="navigation">
                 <ul class="navigation-list">
                     <li class="navigation-item">
-                        <a class="navigation-link" href="home.html">Главная</a>>
+                        <a class="navigation-link" href="#">Главная</a>
                     </li>
                     <li class="navigation-item">
-                        <a class="navigation-link" href="about.html">О Седоне</a>>
+                        <a class="navigation-link" href="#">О Седоне</a>
                     </li>
                     <li class="navigation-item">
                         <a class="navigation-link" href="catalog.html">Гостиницы</a>
@@ -23,21 +23,20 @@
                 </a>
                  <ul class="navigation-list navigation-user">
                      <li class="navigation-item">
-                         <a class="navigation-link" href="#">
-                             <span class="visually-hidden">Поиск</span>
-                        </a>
-                    </li>
-                    <li class="navigation-item">
+                         <form class="navigation-form" action="https://echo.htmlacademy.ru/" method="get">
+                            <label class="visually-hidden">
+                                Поиск<input class="navigation-search" type="text" name="search">
+                            </label>
+                     </li>
+                     <li class="navigation-item">
                         <a class="navigation-link" href="#">
-                            <span class="visually-hidden">Избранное</span>
-                        </a>
-                    </li>
-                    <li class="navigation-item">
-                        <a class="navigation-link-button" href="#">
-                            <span class="navigation-button">Хочу сюда!</span>
-                        </a>
-                    </li>
-                </ul>
+                            <span class="visually-hidden">Избранное<sup class="navigation-select">12</sup></span>
+                       </a>
+                     </li>
+                     <li class="navigation-item">
+                        <a class="navigation-link-button" href="#">Хочу сюда!</a>
+                     </li>
+                 </ul>
             </nav>
         </header>
         <main class="main-inner">
@@ -152,9 +151,7 @@
                             <img class="hotel-card-image" src="#" alt="">
                             <h3 class="hotel-card-title">Amara Resort & Spa</h3>
                         </a>
-                        <span class="hotel-card-info">Гостиница</span>
-                        <span class="hotel-card-info">От 4000 ₽</span>
-                        <br>
+                        <span class="hotel-card-info">Гостиница От 4000 ₽</span>
                         <a class="button" href="hotel.html">Подробнее</a>
                         <button class="button-upload" type="button">В избранное</button>
                         <span class="visually-hidden">Количество звезд 4</span>
@@ -165,9 +162,7 @@
                             <img class="hotel-card-image" src="#" alt="">
                             <h3 class="hotel-card-title">Desert Quail Inn</h3>
                         </a>
-                        <span class="hotel-card-info">Мотель</span>
-                        <span class="hotel-card-info">От 3000 ₽</span>
-                        <br>
+                        <span class="hotel-card-info">Мотель От 3000 ₽</span>
                         <a class="button" href="hotel.html">Подробнее</a>
                         <button class="button-upload" type="button">В избранное</button>
                         <span class="visually-hidden">Количество звезд 3</span>
@@ -178,9 +173,7 @@
                             <img class="hotel-card-image" src="#" alt="">
                             <h3 class="hotel-card-title">Villas at Poco Diablo</h3>
                         </a>
-                        <span class="hotel-card-info">Апартаменты</span>
-                        <span class="hotel-card-info">От 2000 ₽</span>
-                        <br>
+                        <span class="hotel-card-info">Апартаменты От 2000 ₽</span>
                         <a class="button" href="hotel.html">Подробнее</a>
                         <button class="button-uploaded" type="button">В избранном</button>
                         <span class="visually-hidden">Количество звезд 2</span>
@@ -191,9 +184,7 @@
                             <img class="hotel-card-image" src="#" alt="">
                             <h3 class="hotel-card-title">GreenTree Inn</h3>
                         </a>
-                        <span class="hotel-card-info">Гостиница</span>
-                        <span class="hotel-card-info">От 3000 ₽</span>
-                        <br>
+                        <span class="hotel-card-info">Гостиница От 3000 ₽</span>
                         <a class="button" href="hotel.html">Подробнее</a>
                         <button class="button-upload" type="button">В избранное</button>
                         <span class="visually-hidden">Количество звезд 2</span>
@@ -234,13 +225,12 @@
                 </form>
             </section>
             <section class="newsletter">
-                <h3 class="">Подпишитесь на рассылку</h3>
-                <form class="newsletter-form" action="#" method="post">
-                    <p class="newsletter-email">
-                        <label class="visually-hidden" for="newsletter-email">email</label>
-                        <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter" id="newsletter-email">
-                        <input class="button" type="submit" value="Подписаться">
-                    </p>
+                <h2 class="">Подпишитесь на рассылку</h2>
+                <p>Только полезная информация и никакого спама,честное бойскаутское!</p>
+                <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
+                     <label class="visually-hidden" for="newsletter-email">email</label>
+                     <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter" id="newsletter-email">
+                     <input class="button" type="submit" value="Подписаться">
                 </form>
             </section>
         </main>
@@ -265,7 +255,7 @@
                     </li>
                 </ul>
             </section>
-            <p class="footer-contact">+7 (812) 812-12-12</p>
+            <a class="footer-contact-fone" href="tel:78128121212">+7 (812) 812-12-12</a>
             <a class="footer-link-logo" href="https://htmlacademy.ru/">
                 <img class="footer-logo" src="#" alt="Логотип разработчика">
             </a>
