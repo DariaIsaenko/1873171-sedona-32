@@ -65,9 +65,9 @@ body {
 
 }
 
-.main-welcome {
+.index-welcome {
     background-color: #FFFFFF;
-    background-image: url("/img/index-background.jpg");
+    background-image: url(../img/index-background.jpg);
     background-repeat: no-repeat;
 }
 
@@ -144,7 +144,7 @@ body {
 
 .newsletter {
     background-color: #FFFFFF;
-    background-image: url("/img/background.jpg");
+    background-image: url(../img/background.jpg);
     background-repeat: no-repeat;
     font-size: 22px;
     line-height: 26px;
@@ -194,7 +194,7 @@ body {
 
 .main-catalog-filter {
     background-color: #FFFFFF;
-    background-image: url("/img/catalog/catalog-background\ 1.jpg");
+    background-image: url(../img/catalog/catalog-background\ 1.jpg);
     background-repeat: no-repeat;
     font-style: normal;
     font-weight: normal;
