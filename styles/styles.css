@@ -325,6 +325,10 @@ body {
     line-height: 78px;
 }
 
+.breadcrumbs {
+    display: flex;
+}
+
 .breadcrumbs-link {
     font-size: 16px;
     line-height: 21px;
@@ -351,6 +355,11 @@ body {
     line-height: 23px;
     color: #FFFFFF;
     opacity: 0.3;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
 }
 
 .button-filter {
@@ -398,6 +407,10 @@ body {
     width: 1056px;
     align-self: center;
 } 
+
+.catalog-sorting-container {
+    display: flex;
+}
 
 .highlight-catalog {
     font-weight: 700;
@@ -488,6 +501,10 @@ body {
     background-color: #f2f2f2;
 }
 
+.select-control {
+    display: flex;
+}
+
 .newsletter-highlight-catalog {
     font-family: "PT Sans", sans-serif;
     font-weight: 700;
@@ -505,4 +522,3 @@ body {
 .newsletter-catalog {
     background-color: inherit;
 }
-
