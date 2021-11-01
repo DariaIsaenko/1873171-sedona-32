@@ -408,8 +408,17 @@ body {
     align-self: center;
 } 
 
+.hotel-card {
+    display: flex;
+}
+
+
 .catalog-sorting-container {
     display: flex;
+}
+
+.card-container {
+   display: flex;
 }
 
 .highlight-catalog {
