@@ -270,16 +270,14 @@ body {
     text-decoration: none;
 }
 
-.page-footer-container{
-    display: flex;
-    width: 1200px;
-    margin: 0 auto;
-} 
 
 .page-footer {
     background-color: #FFFFFF;
     color: #000000;
     text-align: center;
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
 }
 
 .footer-social {
@@ -461,6 +459,18 @@ body {
     text-transform: uppercase;
     background-color: #83B3D3;
     color: #FFFFFF;
+}
+
+.pagination-container{
+    display: flex;
+    margin: 0 auto;
+    width: 1056px;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.pagination {
+    display: flex;
 }
 
 .pagination-link {
