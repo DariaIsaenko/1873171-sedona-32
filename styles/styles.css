@@ -34,6 +34,16 @@ body {
     color: #333333;
     background-color: #FFFFFF;
 }
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
 
 .page-header {
     color: #000000;
@@ -54,6 +64,8 @@ body {
     width: 370px;
     margin-right: 90px;
     margin-left: 71px;
+    list-style-type: none;
+    flex-wrap: wrap;
 }
 
 .navigation-link {
@@ -62,7 +74,18 @@ body {
     font-weight: 700;
     color: #000000;
     text-decoration: none;
-    text-align: center; 
+    text-align: center;
+}
+
+.navigation-list .navigation-item {
+    display: block; 
+    margin-top: 19px;
+    margin-bottom: 20px;
+    margin-right: 33px;
+}
+
+.navigation-list .navigation-item:nth-child(3n) {
+    margin-right: 0;
 }
 
 .navigation-header-logo {
@@ -76,7 +99,36 @@ body {
     max-width: 300px;
     margin-right: 72px;
     margin-left: auto;
+    list-style-type: none;
 }
+
+.navigation-user .navigation-item:nth-child(1) {
+    min-width: 18px;
+    min-height: 18.1px;
+    display: block;
+    margin-top: 24px;
+    margin-right: 21px;
+    margin-bottom: 23px;
+}
+
+.navigation-user .navigation-item:nth-child(2) {
+    min-width: 31px;
+    min-height: 27px;
+    display: block;
+    margin-top: 14px;
+    margin-right: 20px;
+    margin-bottom: 24px;
+}
+
+.navigation-user .navigation-item:nth-child(3) {
+    display: block;
+    min-width: 160px;
+    min-height: 37px;
+    margin-top: 23px;
+    margin-right: 0;
+    margin-bottom: 14px;
+}
+
 
 .navigation-select {
     font-family: "PT Sans", sans-serif;
@@ -412,14 +464,18 @@ body {
     display: flex;
 }
 
+.card-container {
+    display: flex;
+}
+
+.container-card-hotel {
+    display: flex;
+}
 
 .catalog-sorting-container {
     display: flex;
 }
 
-.card-container {
-   display: flex;
-}
 
 .highlight-catalog {
     font-weight: 700;
