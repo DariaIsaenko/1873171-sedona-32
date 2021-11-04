@@ -372,7 +372,6 @@ body {
     font-weight: normal;
     font-size: 18px;
     line-height: 26px;
-    align-items: center;
     color: #000000;
     opacity: 0.6;
 }
@@ -407,7 +406,7 @@ body {
 }
 
 .footer-social {
-    max-width: 140;
+    max-width: 140px;
     margin-right: auto;
     margin-left: 58px;
 }
@@ -473,6 +472,10 @@ body {
     color: #FFFFFF;
     padding: 35px 72px 83px 71px;
     margin-bottom: 44px;
+}
+
+.catalog-filter-list {
+    list-style-type: none;
 }
 
 .inner-header-title {
