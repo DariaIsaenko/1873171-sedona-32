@@ -148,6 +148,7 @@ body {
 .navigation-link-button:focus {
     background-color: #615048;
     box-shadow: 0 0 1px 3px #83B3D3;
+    color: rgb(255 255 255 / 30%);
     border-radius: 4px;
     outline: none;
 }
