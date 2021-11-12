@@ -137,19 +137,25 @@
                             <div class="button-filter-container">
                                 <fieldset class="catalog-filter-group">
                                     <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-                                    <label class="catalog-filter-label">
-                                        <input class="catalog-filter-input" placeholder="от" type="number" name="min-price">
-                                    </label>
-                                    <label class="catalog-filter-label">
-                                        <input class="catalog-filter-input" placeholder="до" type="number" name="max-price">
-                                    </label>
+                                    <div class="range-inputs">
+                                        <label class="catalog-filter-label">
+                                            <input class="catalog-filter-input" placeholder="от" type="number" value="0" name="min-price">
+                                        </label>
+                                        <label class="catalog-filter-label">
+                                            <input class="catalog-filter-input" placeholder="до" type="number" value="9000" name="max-price">
+                                        </label>
+                                    </div>
                                 </fieldset>
-                                <button class="range-toggle toggle-min" type="button">
-                                    <span class="visually-hidden">Изменить минимальную цену</span>
-                                </button>
-                                <button class="range-toggle toggle-max" type="button">
-                                    <span class="visually-hidden">Изменить максимальную цену</span>
-                                </button>
+                                <div class="range-scale">
+                                    <div class="range-bar" style="width: 227px">
+                                        <button class="range-toggle toggle-min" type="button">
+                                            <span class="visually-hidden">Изменить минимальную цену</span>
+                                        </button>
+                                        <button class="range-toggle toggle-max" type="button">
+                                            <span class="visually-hidden">Изменить максимальную цену</span>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                             <div class="button-container">
                                 <button class="button-filter" type="submit">Применить</button>
@@ -162,12 +168,14 @@
                     <div class="catalog-sorting-container">
                         <h2 class="highlight-catalog">Найдено гостиниц: 38</h2>
                         <form class="sorting-type">
-                            <label class="visually-hidden" for="sorting">Сортировка</label>
-                            <select class="select-control-sorting" id="sorting" name="sorting">
-                                <option value="cheap">Сначала дешевые</option>
-                                <option value="expensive">Сначала дорогие</option>
-                                <option value="popular">Сначала популярые</option>
-                            </select>
+                            <div class="select">
+                                <label class="visually-hidden" for="sorting">Сортировка</label>
+                                <select class="select-control-sorting" id="sorting" name="sorting">
+                                    <option value="cheap">Сначала дешевые</option>
+                                    <option value="expensive">Сначала дорогие</option>
+                                    <option value="popular">Сначала популярые</option>
+                                </select>
+                            </div>
                             <button class="visually-hidden" type="submit">Отсортировать гостиницы</button>
                         </form>
                         <a href="#" class="button-light">
@@ -327,11 +335,13 @@
                         </ul>
                         <form class="hotel-display" action="https://echo.htmlacademy.ru/" method="get">
                             <label class="hotels-display-page" for="display">Гостиниц на странице:</label>
-                            <select class="select-control" id="display" name="display">
-                                <option value="four">4</option>
-                                <option value="eight">8</option>
-                                <option value="twelve">12</option>
-                            </select>
+                            <div class="select-display">
+                                <select class="select-control" id="display" name="display">
+                                    <option value="four">4</option>
+                                    <option value="eight">8</option>
+                                    <option value="twelve">12</option>
+                                </select>
+                            </div>
                             <button class="visually-hidden" type="submit">Показать гостиницы</button>
                         </form>
                     </div>
