@@ -1238,7 +1238,7 @@ img {
     background: rgba(255, 255, 255, 0.6);
 }
 
-.control:focus .control-mark:focus {
+.control-mark:focus  {
     background: rgba(255, 255, 255, 0.6);
     outline: #83B3D3 solid 3px;
     outline-offset: -3px;
@@ -1322,7 +1322,11 @@ img {
     flex-wrap: wrap;
 }
 
-.range-inputs::before{
+.catalog-filter-label {
+    position: relative;
+}
+
+.catalog-filter-label:first-of-type::before {
     position: absolute;
     content: "от";
     font-family: "PT Sans", sans-serif;
@@ -1331,10 +1335,11 @@ img {
     text-align: right;
     color: #FFFFFF;
     opacity: 0.3;
-    transform: translate(112px, 11px);
+    top: 12px;
+    right: 14px;
 }
 
-.range-inputs::after{
+.catalog-filter-label:nth-of-type(2)::before {
     position: absolute;
     content: "до";
     font-family: "PT Sans", sans-serif;
@@ -1343,7 +1348,8 @@ img {
     text-align: right;
     color: #FFFFFF;
     opacity: 0.3;
-    transform: translate(250px, 11px);
+    top: 12px;
+    right: 14px;
 }
 
 .catalog-filter-input {
@@ -1380,17 +1386,34 @@ img {
     outline: none;
 }
 
-.catalog-filter-input:hover {
-    border-color: #FFFFFF;
-    opacity: 0.6;
+.catalog-filter-label:first-of-type .catalog-filter-input:hover {
+    border: 2px solid rgb(255 255 255 / 60%);
+    border-right: 0;
 }
 
-.catalog-filter-input:focus {
+.catalog-filter-label:first-of-type .catalog-filter-input:focus {
+    box-shadow: 0 0 0 3px #81b3d2, inset 0 0 0 3px #81b3d2;
+    border: 2px solid rgb(255 255 255);
+    border-right: 0;
+}
+
+.catalog-filter-label:first-of-type .catalog-filter-input:active {
+    border: 2px solid #FFFFFF;
+    background-color: #756257;
+    border-radius: 4px 0 0 4px;
+    border-right: 0;
+}
+
+.catalog-filter-label:nth-of-type(2) .catalog-filter-input:hover {
+    border: 2px solid rgb(255 255 255 / 60%);
+}
+
+.catalog-filter-label:nth-of-type(2) .catalog-filter-input:focus {
     box-shadow: 0 0 0 3px #81b3d2, inset 0 0 0 3px #81b3d2;
     border: 2px solid rgb(255 255 255);
 }
 
-.catalog-filter-input:active {
+.catalog-filter-label:nth-of-type(2) .catalog-filter-input:active {
     border: 2px solid #FFFFFF;
     background-color: #756257;
     border-radius: 0 4px 4px 0;
@@ -1557,11 +1580,9 @@ img {
 .select::after {
     position: absolute;
     content: url(../img/icon/arrow.svg);
-    opacity: 30%;
     right: 0;
     transform: translate(-20px, -2px);
 }
-
 
 .select-control-sorting:hover {
     outline: #83B3D3 solid 2px;
