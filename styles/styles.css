@@ -350,7 +350,7 @@ img {
 .cart-item-container:focus {
     outline: #83B3D3 solid 3px;
     outline-offset: 10px; 
-    border-radius: 10px;
+    border-radius: 1px;
 }
 
 .cart-item-container:active {
@@ -408,6 +408,10 @@ img {
     outline: none;
 }
 
+.cart-item-button:active .delete {
+    fill: rgba(0, 0, 0, .1);
+}
+
 .cart-item-info {
     font-family: "PT Sans", sans-serif;
     font-style: normal;
@@ -448,9 +452,8 @@ img {
 .cart-items-button:focus {
     background-color: #615048;
     box-shadow: 0 0 1px 3px #83B3D3;
-    color: rgb(255 255 255 / 30%);
+    outline-offset: -3px;
     border-radius: 0 0 20px 20px;
-    outline: none;
 }
 
 .cart-items-button:active {
@@ -1097,39 +1100,80 @@ img {
     justify-content: space-between;
 }
 
-.field-group:first-child::after {
-    position: absolute;
-    content: "Мы не можем отправить вас в прошлое.";
-    font-family: "PT Sans";
-    font-style: normal; 
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 40px;
-    color: #ff5757;
-    transform: translate(155px, 43px);
+.label-form {
+    margin-right: auto;
+    text-align: left;
+    color: #000000;
 }
 
-.field-group:nth-child(2)::after {
-    position: absolute;
-    content: "На эти даты есть свободные номера. Пока есть.";
-    font-family: "PT Sans";
+.button-calendar {
+    width: 50px;
+    border: none;
+    padding: 0;
+    background-color: #f2f2f2;
+    border-radius: 0 4px 4px 0;
+    box-sizing: border-box;
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+.button-date {
+    fill: rgba(0, 0, 0, 0.3);
+}
+
+.button-calendar:hover {
+    background-color: #e6e6e6;
+}
+
+.button-calendar:focus {
+    background-color: #e6e6e6;
+    box-shadow: 0 0 1px 3px #83B3D3;
+    border-radius: 0 4px 4px 0;
+    outline: none;
+}
+
+.button-calendar:active {
+    background-color: #FFFFFF;
+    box-shadow: inset 0 0 1px 2px #000000;
+    border-radius: 0 4px 4px 0;
+}
+
+.button-calendar:hover .button-date{
+    fill: #000000;
+}
+
+.button-calendar:focus .button-date{
+    fill: #000000;
+}
+
+.button-calendar:active .button-date{
+    fill: #000000;
+}
+
+.form-message-about {
+    font-family: "PT Sans", sans-serif;
     font-style: normal; 
     font-weight: normal;
     font-size: 16px;
     line-height: 40px;
+    max-height: 29px;
+    text-align: start;
+    display: none;
+    position: absolute;
+    bottom: 0;
+    transform: translate(155px, 23px);
+}
+
+.field-group:first-child .form-message-about {
+    color: #ff5757;
+}
+
+.field-group:nth-child(2) .form-message-about {
     color: #333333;
-    transform: translate(155px, 43px);
 }
 
 .field-group:nth-of-type(4) {
     margin-left: 56px;
-}
-
-.label-form::after {
-    position: absolute;
-    content: url(../img/modal/date-modal.svg);
-    right: 19px;
-    top: 6px;
 }
 
 .arrival-form-date {
@@ -1177,7 +1221,7 @@ img {
 
 .modal-button-search:focus {
     background-color: #68A2CA;
-    box-shadow: inset 0 0 1px 3px #756257;
+    box-shadow: 0 0 1px 3px #756257;
     outline: none;
 }
 
@@ -1188,13 +1232,15 @@ img {
 }
 
 .field-search-form {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
     padding: 5px 17px 5px 19px;
     margin: 0;
-    width: 420px;
+    width: 370px;
     height: 50px;
     box-sizing: border-box;
     border: none;
-    border-radius: 4px;
+    border-radius: 4px 0 0 4px;
     background-color: #F2F2F2;
     cursor: pointer;
     font-family: "PT Sans", sans-serif;
@@ -1222,7 +1268,7 @@ img {
 .field-search-form:focus {
     background-color: #e6e6e6;
     box-shadow: 0 0 1px 3px #83B3D3;
-    border-radius: 4px;
+    border-radius: 4px 0 0 4px;
     outline: none;
 }
 
@@ -1234,6 +1280,10 @@ img {
 
 .field-search-form:invalid {
     border-radius: 4px;
+}
+
+.field-search-form:invalid + .form-message-about {
+    display: block;
 }
 
 .input-quantity {
@@ -1253,7 +1303,6 @@ img {
     cursor: pointer;
 }
 
-
 .field-number::placeholder {
     font-family: "PT Sans", sans-serif;
     font-style: normal;
@@ -1270,32 +1319,38 @@ img {
     margin: 0;
     border: none;
     cursor: pointer;
-    font-family: "PT Sans", sans-serif;
-    font-style: normal;
-    font-size: 16px;
+}
+/* plus minus */
+.minus {
+    position: absolute;
+    transform: translateX(-6px);
 }
 
-.button-quantity:hover {
-    color: rgba(0, 0, 0, 0.3);
+.plus {
+    position: absolute;
+    transform: translate(-8px, -6px);
 }
 
-.button-quantity:focus {
-    color: #000000;
-    outline: #83B3D3 solid 3px;
-    border-radius: 4px;
+.quantity {
+    fill: rgba(0, 0, 0, 0.3);
+    outline: none;
 }
 
-.button-quantity:active {
-    color: rgba(0, 0, 0, 0.6);
+.button-quantity:hover .quantity {
+    fill: rgba(0, 0, 0);
 }
 
-.button-quantity.minus {
-    border-radius: 4px 0 0 4px;
-} 
+.button-quantity:focus .quantity {
+    fill: rgba(0, 0, 0);
+}
 
-.button-quantity.plus {
-    border-radius: 0 4px 4px 0;
-} 
+.button-quantity:focus .quantity:focus {
+    fill: rgba(0, 0, 0);
+}
+
+.button-quantity:active .quantity {
+    fill: rgba(0, 0, 0, 0.2);
+}
 
 .info {
     position: absolute;
@@ -1306,7 +1361,6 @@ img {
     background-color: #83B3D3;
     cursor: pointer;
     transform: translate(11px, 13px);
-    
 }
 
 .info::before {
@@ -1357,8 +1411,6 @@ img {
     text-align: left;
     margin: 0;
 }
-
-
 
 .page-container-catalog {
     width: 1200px;
