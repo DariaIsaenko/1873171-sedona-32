@@ -44,7 +44,8 @@
                                 <span class="visually-hidden">Избранное</span>
                                 <sup class="navigation-select">12</sup>
                             </a>
-                            <div class="popover popover-cart popover-open">
+                            <!-- popover-open -->
+                            <div class="popover popover-cart">  
                                 <div class="popover-content">
                                     <div class="container-cart-list">
                                         <ul class="cart-items-list">
@@ -229,6 +230,43 @@
                 </button>
                 <section class="modal-content">
                     <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+                    <form class="search-form" action="https://echo.htmlacademy.ru/" metod="get">
+                        <p class="field-group arrival-form-date">
+                            <label class="label-form" for="arrival-date">Дата заезда:</label>
+                            <input class="field-search-form" type="text" id="arrival-date" name="arrival-date" value="27 апреля 2020" placeholder="Укажите дату">
+                        </p>
+                        <p class="field-group departure-form-date">
+                            <label class="label-form" for="departure-date">Дата выезда:</label>
+                            <input class="field-search-form" type="text" id="departure-date" name="departure-date" value="1 сентября 2021" placeholder="Укажите дату">
+                        </p>
+                        <p class="field-group adults">
+                            <label for="adults">Взрослые:</label>
+                            <span class="input-quantity">
+                              <input class="button-quantity minus" type="button" name="minus" value="-">
+                              <input class="field-number" type="text" id="adults" name="adults" placeholder="2">
+                              <input class="button-quantity plus" type="button" name="plus" value="+">
+                            </span>
+                        </p>
+                        <p class="field-group children">
+                            <span class="form-label form-label-info">
+                              <label class="label-info" for="children">Дети:</label>
+                                  <button class="info" type="button"><span class="visually-hidden">Посмотреть дополнительную информацию</span></button>
+                            </span>
+                            <span class="input-quantity">
+                                 <input class="button-quantity minus" type="button" name="minus" value="-">
+                                 <input class="field-number" type="text" id="children" name="children" placeholder="1">
+                                 <input class="button-quantity plus" type="button" name="plus" value="+">
+                            </span>
+                            
+                        </p>
+                        <div class="popover popover-info popover-open">  
+                            <div class="popover-content-info">
+                                Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                            </div>
+                        </div>
+                        <button class="modal-button-search" type="submit">Найти</button>
+
+                    </form>
                 </section>
             </div>
                
