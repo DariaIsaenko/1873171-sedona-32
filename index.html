@@ -82,7 +82,7 @@
                             <div class="cart-item-container" tabindex="0">
                               <img class="cart-item-image" src="img/catalog/hotel-2-small.jpg" alt="Фото гостиницы" width="48"
                                 height="48">
-                              <p class="card-item-title">Desert Quail Inn</p>
+                              <p class="cart-item-title">Desert Quail Inn</p>
                               <span class="cart-item-info">Мотель</span>
                             </div>
                             <button class="cart-item-button" type="button">
@@ -100,7 +100,7 @@
                             <div class="cart-item-container" tabindex="0">
                               <img class="cart-item-image" src="img/catalog/hotel-3-small.jpg" alt="Фото гостиницы" width="48"
                                 height="48">
-                              <p class="card-item-title">Villas at Poco Diablo</p>
+                              <p class="cart-item-title">Villas at Poco Diablo</p>
                               <span class="cart-item-info">Апартаменты</span>
                             </div>
                             <button class="cart-item-button" type="button">
@@ -206,7 +206,7 @@
               <p class="newsletter-text">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
               <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
                 <label class="visually-hidden" for="newsletter-email">email</label>
-                <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter" id="newsletter-email" required>
+                <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter" id="newsletter-email">
                 <input class="button-newsletter" type="submit" value="Подписаться">
               </form>
             </section>
@@ -254,7 +254,8 @@
             </a>
           </footer>
         </div>
-        <div class="modal-container modal-container-close">
+        <!-- modal-container-close -->
+        <div class="modal-container">
           <div class="modal modal-search">
             <button class="modal-close-button">
               <span class="visually-hidden">Закрыть</span>
@@ -295,7 +296,7 @@
                   <span class="form-message-about">На эти даты есть свободные номера. Пока есть.</span>
                 </p>
                 <p class="field-group adults">
-                  <label for="adults">Взрослые:</label>
+                  <label class="label-form" for="adults">Взрослые:</label>
                   <span class="input-quantity">
                     <button class="button-quantity" type="button">
                       <svg class="quantity minus" aria-hidden="true" focusable="false" width="13" height="1" viewBox="0 0 13 1"
@@ -312,8 +313,8 @@
                   </span>
                 </p>
                 <p class="field-group children">
-                  <span class="form-label form-label-info">
-                    <label class="label-info" for="children">Дети:</label>
+                  <span class="form-label-info">
+                    <label class="label-form" for="children">Дети:</label>
                     <button class="info" type="button"><span class="visually-hidden">Посмотреть дополнительную
                         информацию</span></button>
                   </span>
