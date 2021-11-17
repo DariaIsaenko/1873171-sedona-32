@@ -492,16 +492,24 @@ img {
 }
 
 .index-welcome {
+  position: relative;
   background-color: #ffffff;
   background-image: url("../img/index-background.jpg");
   background-repeat: no-repeat;
+}
+
+.index-welcome::after {
+  position: absolute;
+  transform: translateY(-59px);
+  left: 0;
+  content: url("../img/divider.svg");
 }
 
 .main-welcome {
   display: block;
   margin: 0 auto;
   padding: 52px;
-  padding-bottom: 25px;
+  padding-bottom: 83px;
 }
 
 .advantages {
