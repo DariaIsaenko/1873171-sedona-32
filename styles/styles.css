@@ -421,7 +421,7 @@ img {
 
 .cart-item-button:focus {
   outline: #83b3d3 solid 3px;
-  outline-offset: -5px;
+  outline-offset: -3px;
   border-radius: 10px;
 }
 
