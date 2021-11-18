@@ -162,6 +162,7 @@ body {
 
 .navigation-header-logo {
   position: absolute;
+  z-index: 1;
   transform: translateX(531px);
   width: 138px;
 }
@@ -389,7 +390,7 @@ img {
   max-height: 21px;
   padding: 0;
   margin: 0;
-  margin-bottom: -3px;
+  margin-bottom: -5px;
   font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -1099,6 +1100,7 @@ img {
 }
 
 .modal-content {
+  margin-top: 3px;
   font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -1110,7 +1112,7 @@ img {
 .modal-title {
   margin: 0;
   margin-bottom: 32px;
-  margin-left: -2px;
+  margin-left: -3px;
   min-height: 67px;
   width: 499px;
   font-family: "PT Sans", sans-serif;
@@ -1136,11 +1138,15 @@ img {
   justify-content: space-between;
 }
 
-.field-group .label-form {
+.label-form {
   margin-right: auto;
   text-align: left;
   color: #000000;
   align-self: end;
+}
+
+.field-group label {
+  align-self: center;
 }
 
 .button-calendar {
@@ -1239,7 +1245,6 @@ img {
   grid-row: 4 / 5;
   padding: 10px 0;
   border-radius: 10px;
-  margin-top: 2px;
   font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -1335,7 +1340,7 @@ img {
 .field-number {
   width: 33px;
   padding: 0;
-  padding-top: 7px;
+  padding-top: 2px;
   margin: 0;
   border: none;
   background-color: #f2f2f2;
